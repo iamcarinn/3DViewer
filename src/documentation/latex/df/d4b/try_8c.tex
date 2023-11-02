@@ -1,0 +1,212 @@
+\doxysection{try.\+c File Reference}
+\hypertarget{try_8c}{}\label{try_8c}\index{try.c@{try.c}}
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{try_8c_aa8a12f7b8d6b41111945fc46749a9492}{free\+\_\+struct}} (vertex \texorpdfstring{$\ast$}{*}v, object \texorpdfstring{$\ast$}{*}o)
+\begin{DoxyCompactList}\small\item\em Функия производит очистку структур \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{try_8c_aee80691892d60a4daf574a93056ae06e}{copy\+\_\+struct}} (vertex \texorpdfstring{$\ast$}{*}new\+\_\+v, vertex \texorpdfstring{$\ast$}{*}old\+\_\+v, object \texorpdfstring{$\ast$}{*}new\+\_\+o, object \texorpdfstring{$\ast$}{*}old\+\_\+o)
+\begin{DoxyCompactList}\small\item\em Функция копирует структуры координат вершин и соединений в новые структуры \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{try_8c_ae4b65cdcefa08a86522243253aca32f4}{take\+\_\+v}} (vertex \texorpdfstring{$\ast$}{*}v, char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Функция записывает координаты вершины в структуру \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{try_8c_a8a037359848f8aca0cd945729862a8bd}{take\+\_\+o}} (object \texorpdfstring{$\ast$}{*}o, char \texorpdfstring{$\ast$}{*}str, int \texorpdfstring{$\ast$}{*}max\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Функция записывает соединения точек в структуру \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{try_8c_a36927d7e5179ea8cd2ae6b76eec9da9d}{parser}} (vertex \texorpdfstring{$\ast$}{*}ver, object \texorpdfstring{$\ast$}{*}obj, const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Функция производит парсинг строки \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{try_8c_a92451b6eb90739fabcbf00e80a013476}{finding\+\_\+minmax}} (vertex \texorpdfstring{$\ast$}{*}ver)
+\begin{DoxyCompactList}\small\item\em Функция находит max по x, max по y, min и max по z и записывает в структуру \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{try_8c_a9cb73def5f828a0b08e43411a9410a1c}{get\+\_\+config}} (config \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Функция получает данные для вывода 3D модели \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{try_8c_a8633238e2c1c0c317b28595cda9a753d}{put\+\_\+config}} (config \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Функция меняет данные для вывода 3D модели \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{try_8c_aee80691892d60a4daf574a93056ae06e}\label{try_8c_aee80691892d60a4daf574a93056ae06e} 
+\index{try.c@{try.c}!copy\_struct@{copy\_struct}}
+\index{copy\_struct@{copy\_struct}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{copy\_struct()}{copy\_struct()}}
+{\footnotesize\ttfamily void copy\+\_\+struct (\begin{DoxyParamCaption}\item[{vertex \texorpdfstring{$\ast$}{*}}]{new\+\_\+v,  }\item[{vertex \texorpdfstring{$\ast$}{*}}]{old\+\_\+v,  }\item[{object \texorpdfstring{$\ast$}{*}}]{new\+\_\+o,  }\item[{object \texorpdfstring{$\ast$}{*}}]{old\+\_\+o }\end{DoxyParamCaption})}
+
+
+
+Функция копирует структуры координат вершин и соединений в новые структуры 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+v} & новая структура координат вершин \\
+\hline
+{\em old\+\_\+v} & старая структура координат вершин \\
+\hline
+{\em new\+\_\+o} & новая структура соединений \\
+\hline
+{\em old\+\_\+o} & старая струкрура соединений \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00039}{39}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_a92451b6eb90739fabcbf00e80a013476}\label{try_8c_a92451b6eb90739fabcbf00e80a013476} 
+\index{try.c@{try.c}!finding\_minmax@{finding\_minmax}}
+\index{finding\_minmax@{finding\_minmax}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{finding\_minmax()}{finding\_minmax()}}
+{\footnotesize\ttfamily void finding\+\_\+minmax (\begin{DoxyParamCaption}\item[{vertex \texorpdfstring{$\ast$}{*}}]{ver }\end{DoxyParamCaption})}
+
+
+
+Функция находит max по x, max по y, min и max по z и записывает в структуру 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ver} & указатель на структуру координат вершин \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00157}{157}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_aa8a12f7b8d6b41111945fc46749a9492}\label{try_8c_aa8a12f7b8d6b41111945fc46749a9492} 
+\index{try.c@{try.c}!free\_struct@{free\_struct}}
+\index{free\_struct@{free\_struct}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{free\_struct()}{free\_struct()}}
+{\footnotesize\ttfamily void free\+\_\+struct (\begin{DoxyParamCaption}\item[{vertex \texorpdfstring{$\ast$}{*}}]{v,  }\item[{object \texorpdfstring{$\ast$}{*}}]{o }\end{DoxyParamCaption})}
+
+
+
+Функия производит очистку структур 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & структура с координатами вершин \\
+\hline
+{\em o} & структура с соединением точек \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00021}{21}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_a9cb73def5f828a0b08e43411a9410a1c}\label{try_8c_a9cb73def5f828a0b08e43411a9410a1c} 
+\index{try.c@{try.c}!get\_config@{get\_config}}
+\index{get\_config@{get\_config}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{get\_config()}{get\_config()}}
+{\footnotesize\ttfamily void get\+\_\+config (\begin{DoxyParamCaption}\item[{config \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+
+
+Функция получает данные для вывода 3D модели 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & указатель на структуру с параметрами для вывода 3D модели \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00173}{173}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_a36927d7e5179ea8cd2ae6b76eec9da9d}\label{try_8c_a36927d7e5179ea8cd2ae6b76eec9da9d} 
+\index{try.c@{try.c}!parser@{parser}}
+\index{parser@{parser}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily int parser (\begin{DoxyParamCaption}\item[{vertex \texorpdfstring{$\ast$}{*}}]{ver,  }\item[{object \texorpdfstring{$\ast$}{*}}]{obj,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{path }\end{DoxyParamCaption})}
+
+
+
+Функция производит парсинг строки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ver} & указатель на структуру координат вершин \\
+\hline
+{\em obj} & указатель на структура соединений точек \\
+\hline
+{\em path} & указатель на строку, содержащую путь до объектного файла \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+результат парсинга строки ~\newline
+ 0 -\/ OK ~\newline
+ 1 -\/ не открылся файл ~\newline
+ 2 -\/ проблема с координатами ~\newline
+ 3 -\/ проблема с вершинами ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00118}{118}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_a8633238e2c1c0c317b28595cda9a753d}\label{try_8c_a8633238e2c1c0c317b28595cda9a753d} 
+\index{try.c@{try.c}!put\_config@{put\_config}}
+\index{put\_config@{put\_config}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{put\_config()}{put\_config()}}
+{\footnotesize\ttfamily void put\+\_\+config (\begin{DoxyParamCaption}\item[{config \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+
+
+Функция меняет данные для вывода 3D модели 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & указатель на структуру с параметрами для вывода 3D модели \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00198}{198}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_a8a037359848f8aca0cd945729862a8bd}\label{try_8c_a8a037359848f8aca0cd945729862a8bd} 
+\index{try.c@{try.c}!take\_o@{take\_o}}
+\index{take\_o@{take\_o}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{take\_o()}{take\_o()}}
+{\footnotesize\ttfamily int take\+\_\+o (\begin{DoxyParamCaption}\item[{object \texorpdfstring{$\ast$}{*}}]{o,  }\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{int \texorpdfstring{$\ast$}{*}}]{max\+\_\+f }\end{DoxyParamCaption})}
+
+
+
+Функция записывает соединения точек в структуру 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & указатель на структура соединений точек \\
+\hline
+{\em str} & указатель на текущий символ в файле \\
+\hline
+{\em max\+\_\+f} & указатель на максимум по х \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество точек в текущем соединении 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00080}{80}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+
+\Hypertarget{try_8c_ae4b65cdcefa08a86522243253aca32f4}\label{try_8c_ae4b65cdcefa08a86522243253aca32f4} 
+\index{try.c@{try.c}!take\_v@{take\_v}}
+\index{take\_v@{take\_v}!try.c@{try.c}}
+\doxysubsubsection{\texorpdfstring{take\_v()}{take\_v()}}
+{\footnotesize\ttfamily int take\+\_\+v (\begin{DoxyParamCaption}\item[{vertex \texorpdfstring{$\ast$}{*}}]{v,  }\item[{char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+
+
+Функция записывает координаты вершины в структуру 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & указатель на структуру координат вершин \\
+\hline
+{\em str} & указатель на текущий символ в файле \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество координат точки ~\newline
+ 2 -\/ точка с координатами x, y ~\newline
+ 3 -\/ точка с координатами x, y, z ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{try_8c_source_l00061}{61}} of file \mbox{\hyperlink{try_8c_source}{try.\+c}}.
+

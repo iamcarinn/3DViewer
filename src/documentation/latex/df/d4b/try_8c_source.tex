@@ -1,0 +1,178 @@
+\doxysection{try.\+c}
+\hypertarget{try_8c_source}{}\label{try_8c_source}\mbox{\hyperlink{try_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}main.h"{}}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00003}00003\ \textcolor{comment}{//\ int\ main(void)\ \{}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00004}00004\ \textcolor{comment}{//\ \ \ vertex\ v;}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00005}00005\ \textcolor{comment}{//\ \ \ object\ o;}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00006}00006\ \textcolor{comment}{//\ \ \ printf("{}\%d\(\backslash\)n"{},}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00007}00007\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ parser(\&v,\ \&o,\ "{}/Users/jigsawda/Downloads/obj/one\_million.obj"{}));}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00008}00008\ \textcolor{comment}{//\ \ \ //\ vertex\ copy\_v;}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00009}00009\ \textcolor{comment}{//\ \ \ //\ object\ copy\_o;}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00010}00010\ \textcolor{comment}{//\ \ \ //\ copy\_struct(\&copy\_v,\ \&v,\ \&copy\_o,\ \&o);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00011}00011\ \textcolor{comment}{//\ \ \ printf("{}count\ \%d\(\backslash\)n"{},\ o.amountF);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00012}00012\ \textcolor{comment}{//\ \ \ //\ printf("{}count\ \%d\(\backslash\)n"{},\ copy\_o.amountF);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00013}00013\ \textcolor{comment}{//\ \ \ free\_struct(\&v,\ \&o);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00014}00014\ \textcolor{comment}{//\ \ \ //\ free\_struct(\&copy\_v,\ \&copy\_o);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00015}00015\ \textcolor{comment}{//\ \ \ return\ 0;}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00016}00016\ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00021}\mbox{\hyperlink{try_8c_aa8a12f7b8d6b41111945fc46749a9492}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{try_8c_aa8a12f7b8d6b41111945fc46749a9492}{free\_struct}}(vertex\ *v,\ \textcolor{keywordtype}{object}\ *o)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00022}00022\ \ \ \textcolor{comment}{//\ for\ (int\ i\ =\ 0;\ i\ <\ o-\/>amountF;\ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00023}00023\ \ \ \textcolor{comment}{//\ \ \ printf("{}\%d\ "{},\ o-\/>f[i]);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00024}00024\ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00025}00025\ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00026}00026\ \ \ free(o-\/>f);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00027}00027\ \ \ \textcolor{comment}{//\ for\ (int\ i\ =\ 0;\ i\ <\ v-\/>amountV;\ i\ +=\ 3)\ \{}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00028}00028\ \ \ \textcolor{comment}{//\ \ \ printf("{}\%lf\ \%lf\ \%lf\(\backslash\)n"{},\ v-\/>v[i],\ v-\/>v[i\ +\ 1],\ v-\/>v[i\ +\ 2]);}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00029}00029\ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00030}00030\ \ \ free(v-\/>v);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00039}\mbox{\hyperlink{try_8c_aee80691892d60a4daf574a93056ae06e}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{try_8c_aee80691892d60a4daf574a93056ae06e}{copy\_struct}}(vertex\ *new\_v,\ vertex\ *old\_v,\ \textcolor{keywordtype}{object}\ *new\_o,\ \textcolor{keywordtype}{object}\ *old\_o)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00040}00040\ \ \ new\_v-\/>v\ =\ (\textcolor{keywordtype}{double}\ *)calloc(old\_v-\/>amountV,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00041}00041\ \ \ new\_o-\/>f\ =\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *)calloc(old\_o-\/>amountF,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00042}00042\ \ \ new\_v-\/>amountV\ =\ old\_v-\/>amountV;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00043}00043\ \ \ new\_o-\/>amountF\ =\ old\_o-\/>amountF;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00044}00044\ \ \ new\_v-\/>maxV\ =\ old\_v-\/>maxV;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00045}00045\ \ \ new\_v-\/>maxZ\ =\ old\_v-\/>maxZ;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00046}00046\ \ \ new\_v-\/>minZ\ =\ old\_v-\/>minZ;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00047}00047\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ old\_v-\/>amountV;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00048}00048\ \ \ \ \ new\_v-\/>v[i]\ =\ old\_v-\/>v[i];}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00049}00049\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00050}00050\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ old\_o-\/>amountF;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00051}00051\ \ \ \ \ new\_o-\/>f[i]\ =\ old\_o-\/>f[i];}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00052}00052\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00061}\mbox{\hyperlink{try_8c_ae4b65cdcefa08a86522243253aca32f4}{00061}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{try_8c_ae4b65cdcefa08a86522243253aca32f4}{take\_v}}(vertex\ *v,\ \textcolor{keywordtype}{char}\ *str)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00062}00062\ \ \ \textcolor{keywordtype}{int}\ res\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00063}00063\ \ \ \textcolor{keywordtype}{char}\ *end\ =\ str;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00064}00064\ \ \ \textcolor{keywordtype}{size\_t}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00065}00065\ \ \ \textcolor{keywordflow}{while}\ (*str)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00066}00066\ \ \ \ \ v-\/>v[v-\/>amountV\ +\ i]\ =\ strtod(str,\ \&end);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00067}00067\ \ \ \ \ str\ =\ end;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00068}00068\ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{while}\ (!isdigit(*str)\ \&\&\ *str\ \&\&\ *str\ !=\ \textcolor{charliteral}{'-\/'})\ str++;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00070}00070\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00071}00071\ \ \ res\ =\ i\ ==\ 3\ ?\ res\ :\ 2;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00072}00072\ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00080}\mbox{\hyperlink{try_8c_a8a037359848f8aca0cd945729862a8bd}{00080}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{try_8c_a8a037359848f8aca0cd945729862a8bd}{take\_o}}(\textcolor{keywordtype}{object}\ *o,\ \textcolor{keywordtype}{char}\ *str,\ \textcolor{keywordtype}{int}\ *max\_f)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00081}00081\ \ \ \textcolor{keywordtype}{int}\ res\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00082}00082\ \ \ \textcolor{keywordtype}{size\_t}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00083}00083\ \ \ \textcolor{keywordtype}{char}\ *tmp\ =\ strtok(str,\ \textcolor{stringliteral}{"{}\ \(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00084}00084\ \ \ \textcolor{keywordflow}{while}\ (tmp\ !=\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(o-\/>f[o-\/>amountF\ +\ i]\ \%\ 500))\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00086}00086\ \ \ \ \ \ \ o-\/>f\ =\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *)realloc(}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ o-\/>f,\ (o-\/>amountF\ +\ i\ +\ 500)\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int));}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ atoi(tmp)\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00091}00091\ \ \ \ \ \ \ o-\/>f[i\ +\ o-\/>amountF]\ =\ x;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00092}00092\ \ \ \ \ \ \ *max\_f\ =\ *max\_f\ <\ x\ ?\ x\ :\ *max\_f;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00093}00093\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00094}00094\ \ \ \ \ \ \ res\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00096}00096\ \ \ \ \ tmp\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{}\ \(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (i)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00098}00098\ \ \ \ \ \ \ o-\/>f[++i\ +\ o-\/>amountF]\ =\ x;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00100}00100\ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00101}00101\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00102}00102\ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00103}00103\ \ \ \ \ o-\/>f[i\ +\ o-\/>amountF]\ =\ o-\/>f[o-\/>amountF];}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00104}00104\ \ \ \ \ o-\/>amountF\ +=\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00105}00105\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00106}00106\ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00118}\mbox{\hyperlink{try_8c_a36927d7e5179ea8cd2ae6b76eec9da9d}{00118}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{try_8c_a36927d7e5179ea8cd2ae6b76eec9da9d}{parser}}(vertex\ *ver,\ \textcolor{keywordtype}{object}\ *obj,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00119}00119\ \ \ \textcolor{keywordtype}{int}\ res\ =\ 0,\ max\_f\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00120}00120\ \ \ \textcolor{keywordtype}{char}\ *s\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00121}00121\ \ \ \textcolor{keywordtype}{size\_t}\ len\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00122}00122\ \ \ FILE\ *f;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00123}00123\ \ \ f\ =\ fopen(path,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00124}00124\ \ \ \textcolor{keywordflow}{if}\ (f)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00125}00125\ \ \ \ \ ver-\/>amountV\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00126}00126\ \ \ \ \ obj-\/>amountF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00127}00127\ \ \ \ \ ver-\/>v\ =\ (\textcolor{keywordtype}{double}\ *)calloc(300,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00128}00128\ \ \ \ \ obj-\/>f\ =\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *)calloc(500,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00129}00129\ \ \ \ \ ver-\/>maxV\ =\ 0,\ ver-\/>minZ\ =\ -\/1e12,\ ver-\/>maxZ\ =\ 1e12;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{while}\ ((getline(\&s,\ \&len,\ f)\ !=\ -\/1)\ \&\&\ !res)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00131}00131\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s[0]\ ==\ \textcolor{charliteral}{'v'}\ \&\&\ s[1]\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(ver-\/>amountV\ \%\ 300))\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ ver-\/>v\ =}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{double}\ *)realloc(ver-\/>v,\ (300\ +\ ver-\/>amountV)\ *\ \textcolor{keyword}{sizeof}(double));}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ res\ =\ \mbox{\hyperlink{try_8c_ae4b65cdcefa08a86522243253aca32f4}{take\_v}}(ver,\ \&s[1]);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{try_8c_a92451b6eb90739fabcbf00e80a013476}{finding\_minmax}}(ver);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ ver-\/>amountV\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00139}00139\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s[0]\ ==\ \textcolor{charliteral}{'f'}\ \&\&\ s[1]\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ res\ =\ \mbox{\hyperlink{try_8c_a8a037359848f8aca0cd945729862a8bd}{take\_o}}(obj,\ \&s[1],\ \&max\_f);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00141}00141\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{if}\ (s)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00144}00144\ \ \ \ \ \ \ free(s);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00145}00145\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00146}00146\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00147}00147\ \ \ \ \ res\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00148}00148\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00149}00149\ \ \ fclose(f);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00150}00150\ \ \ res\ =\ max\_f\ >\ (ver-\/>amountV\ /\ 3)\ ?\ 3\ :\ res;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00151}00151\ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00152}00152\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00157}\mbox{\hyperlink{try_8c_a92451b6eb90739fabcbf00e80a013476}{00157}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{try_8c_a92451b6eb90739fabcbf00e80a013476}{finding\_minmax}}(vertex\ *ver)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00158}00158\ \ \ \textcolor{comment}{//\ max}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00159}00159\ \ \ ver-\/>maxV\ =\ ver-\/>maxV\ <\ fabs(ver-\/>v[ver-\/>amountV])}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ fabs(ver-\/>v[ver-\/>amountV])}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fabs(ver-\/>maxV);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00162}00162\ \ \ ver-\/>maxV\ =\ ver-\/>maxV\ <\ fabs(ver-\/>v[ver-\/>amountV\ +\ 1])}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ fabs(ver-\/>v[ver-\/>amountV\ +\ 1])}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fabs(ver-\/>maxV);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00165}00165\ \ \ ver-\/>minZ\ =\ ver-\/>minZ\ >\ ver-\/>v[ver-\/>amountV\ +\ 2]\ ?\ ver-\/>v[ver-\/>amountV\ +\ 2]}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ ver-\/>minZ;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00167}00167\ \ \ ver-\/>maxZ\ =\ ver-\/>maxZ\ <\ ver-\/>v[ver-\/>amountV\ +\ 2]\ ?\ ver-\/>v[ver-\/>amountV\ +\ 2]}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ ver-\/>maxZ;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00169}00169\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00173}\mbox{\hyperlink{try_8c_a9cb73def5f828a0b08e43411a9410a1c}{00173}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{try_8c_a9cb73def5f828a0b08e43411a9410a1c}{get\_config}}(config\ *c)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00174}00174\ \ \ FILE\ *f;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00175}00175\ \ \ f\ =\ fopen(\textcolor{stringliteral}{"{}config.txt"{}},\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00176}00176\ \ \ \textcolor{keywordflow}{if}\ (f)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00177}00177\ \ \ \ \ fscanf(f,\ \textcolor{stringliteral}{"{}\%d\ \%d\ \%f\ \%f\ \%f\ \%f\ \%d\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f"{}},}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \&c-\/>projection\_type,\ \&c-\/>rib\_type,\ \&c-\/>rib\_color[0],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \&c-\/>rib\_color[1],\ \&c-\/>rib\_color[3],\ \&c-\/>rib\_thickness,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \&c-\/>vertex\_type,\ \&c-\/>vertex\_color[0],\ \&c-\/>vertex\_color[1],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \&c-\/>vertex\_color[2],\ \&c-\/>vertex\_size,\ \&c-\/>background\_color[0],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \&c-\/>background\_color[1],\ \&c-\/>background\_color[2],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \&c-\/>background\_color[3]);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00184}00184\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00185}00185\ \ \ \ \ f\ =\ fopen(\textcolor{stringliteral}{"{}config.txt"{}},\ \textcolor{stringliteral}{"{}w+"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00186}00186\ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}1\ 1\ 20\ 166\ 25\ 1\ 1\ 110\ 20\ 166\ 1\ 38\ 38\ 38\ 0"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00187}00187\ \ \ \ \ c-\/>projection\_type\ =\ 1,\ c-\/>rib\_type\ =\ 1,\ c-\/>rib\_color[0]\ =\ 20,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00188}00188\ \ \ \ \ c-\/>rib\_color[1]\ =\ 166,\ c-\/>rib\_color[2]\ =\ 25,\ c-\/>rib\_thickness\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00189}00189\ \ \ \ \ c-\/>vertex\_type\ =\ 1,\ c-\/>vertex\_color[0]\ =\ 110,\ c-\/>vertex\_color[1]\ =\ 20,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00190}00190\ \ \ \ \ c-\/>vertex\_color[2]\ =\ 160,\ c-\/>vertex\_size\ =\ 1,\ c-\/>background\_color[0]\ =\ 38,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00191}00191\ \ \ \ \ c-\/>background\_color[1]\ =\ 38,\ c-\/>background\_color[2]\ =\ 38,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00192}00192\ \ \ \ \ c-\/>background\_color[3]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00193}00193\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00194}00194\ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00198}\mbox{\hyperlink{try_8c_a8633238e2c1c0c317b28595cda9a753d}{00198}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{try_8c_a8633238e2c1c0c317b28595cda9a753d}{put\_config}}(config\ *c)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00199}00199\ \ \ FILE\ *f;}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00200}00200\ \ \ f\ =\ fopen(\textcolor{stringliteral}{"{}config.txt"{}},\ \textcolor{stringliteral}{"{}w+"{}});}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00201}00201\ \ \ \textcolor{keywordflow}{if}\ (f)\ \{}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00202}00202\ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}\%d\ \%d\ \%f\ \%f\ \%f\ \%f\ \%d\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f"{}},}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>projection\_type,\ c-\/>rib\_type,\ c-\/>rib\_color[0],\ c-\/>rib\_color[1],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>rib\_color[3],\ c-\/>rib\_thickness,\ c-\/>vertex\_type,}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>vertex\_color[0],\ c-\/>vertex\_color[1],\ c-\/>vertex\_color[2],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>vertex\_size,\ c-\/>background\_color[0],\ c-\/>background\_color[1],}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>background\_color[2],\ c-\/>background\_color[3]);}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00208}00208\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{try_8c_source_l00209}00209\ \}}
+
+\end{DoxyCode}

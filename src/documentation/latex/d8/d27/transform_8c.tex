@@ -1,0 +1,167 @@
+\doxysection{3D/transform.c File Reference}
+\hypertarget{transform_8c}{}\label{transform_8c}\index{3D/transform.c@{3D/transform.c}}
+
+
+Этот файл содержит реализацию функций для изменения масштаба, вычисления координат, вращения модели вокруг оси.  
+
+
+{\ttfamily \#include "{}transform.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{transform_8c_a867fa557ac3915ee19a4438597a7be4e}{move\+\_\+model}} (\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}coordinates, double moveX, double moveY, double moveZ)
+\begin{DoxyCompactList}\small\item\em меляет координаты точек в соответствии с входными параметрами \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transform_8c_aaf4c19a1c07b9eb0507583fa3992e9ed}{scale\+\_\+model}} (\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}coordinates, double scale)
+\begin{DoxyCompactList}\small\item\em маштабирует модель, пропорционально увеличивая координаты точек \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transform_8c_a2e7bbf3b584a2caebd97c7cffb90b29b}{rotate\+\_\+model\+\_\+x}} (\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}coordinates, double angleX)
+\begin{DoxyCompactList}\small\item\em врашает модель вокруг оси OX, меняя координары Y Z у точек \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transform_8c_afcb03e801356e959ae99ae9ffcf17719}{rotate\+\_\+model\+\_\+y}} (\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}coordinates, double angleY)
+\begin{DoxyCompactList}\small\item\em врашает модель вокруг оси OY, меняя координары X Z у точек \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transform_8c_ab664d6d2f408d09dd1d9687a2ac3ede1}{rotate\+\_\+model\+\_\+z}} (\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}coordinates, double angleZ)
+\begin{DoxyCompactList}\small\item\em врашает модель вокруг оси OZ, меняя координары X Y у точек \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Этот файл содержит реализацию функций для изменения масштаба, вычисления координат, вращения модели вокруг оси. 
+
+
+
+Definition in file \mbox{\hyperlink{transform_8c_source}{transform.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{transform_8c_a867fa557ac3915ee19a4438597a7be4e}\label{transform_8c_a867fa557ac3915ee19a4438597a7be4e} 
+\index{transform.c@{transform.c}!move\_model@{move\_model}}
+\index{move\_model@{move\_model}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{move\_model()}{move\_model()}}
+{\footnotesize\ttfamily int move\+\_\+model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}}]{coordinates,  }\item[{double}]{moveX,  }\item[{double}]{moveY,  }\item[{double}]{moveZ }\end{DoxyParamCaption})}
+
+
+
+меляет координаты точек в соответствии с входными параметрами 
+
+Функция вычисляет координаты точек в соответствии с входными параметрами
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & адрес структуры с координатами \\
+\hline
+{\em moveX} & насколько мужно изменить координату по X \\
+\hline
+{\em moveY} & насколько мужно изменить координату по Y \\
+\hline
+{\em moveZ} & насколько мужно изменить координату по Z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ok 1 -\/ структура не существует 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{transform_8c_source_l00010}{10}} of file \mbox{\hyperlink{transform_8c_source}{transform.\+c}}.
+
+\Hypertarget{transform_8c_a2e7bbf3b584a2caebd97c7cffb90b29b}\label{transform_8c_a2e7bbf3b584a2caebd97c7cffb90b29b} 
+\index{transform.c@{transform.c}!rotate\_model\_x@{rotate\_model\_x}}
+\index{rotate\_model\_x@{rotate\_model\_x}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_model\_x()}{rotate\_model\_x()}}
+{\footnotesize\ttfamily int rotate\+\_\+model\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}}]{coordinates,  }\item[{double}]{angleX }\end{DoxyParamCaption})}
+
+
+
+врашает модель вокруг оси OX, меняя координары Y Z у точек 
+
+Функция врашает модель вокруг оси OX, меняя координары Y Z у точек
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & адрес структуры с координатами \\
+\hline
+{\em angleX} & угол поворота \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ok 1 -\/ структура не существует 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{transform_8c_source_l00052}{52}} of file \mbox{\hyperlink{transform_8c_source}{transform.\+c}}.
+
+\Hypertarget{transform_8c_afcb03e801356e959ae99ae9ffcf17719}\label{transform_8c_afcb03e801356e959ae99ae9ffcf17719} 
+\index{transform.c@{transform.c}!rotate\_model\_y@{rotate\_model\_y}}
+\index{rotate\_model\_y@{rotate\_model\_y}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_model\_y()}{rotate\_model\_y()}}
+{\footnotesize\ttfamily int rotate\+\_\+model\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}}]{coordinates,  }\item[{double}]{angleY }\end{DoxyParamCaption})}
+
+
+
+врашает модель вокруг оси OY, меняя координары X Z у точек 
+
+Функция врашает модель вокруг оси OY, меняя координары X Z у точек
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & адрес структуры с координатами \\
+\hline
+{\em angleX} & угол поворота \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ok 1 -\/ структура не существует 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{transform_8c_source_l00074}{74}} of file \mbox{\hyperlink{transform_8c_source}{transform.\+c}}.
+
+\Hypertarget{transform_8c_ab664d6d2f408d09dd1d9687a2ac3ede1}\label{transform_8c_ab664d6d2f408d09dd1d9687a2ac3ede1} 
+\index{transform.c@{transform.c}!rotate\_model\_z@{rotate\_model\_z}}
+\index{rotate\_model\_z@{rotate\_model\_z}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_model\_z()}{rotate\_model\_z()}}
+{\footnotesize\ttfamily int rotate\+\_\+model\+\_\+z (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}}]{coordinates,  }\item[{double}]{angleZ }\end{DoxyParamCaption})}
+
+
+
+врашает модель вокруг оси OZ, меняя координары X Y у точек 
+
+Функция врашает модель вокруг оси OZ, меняя координары X Y у точек
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & адрес структуры с координатами \\
+\hline
+{\em angleX} & угол поворота \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ok 1 -\/ структура не существует 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{transform_8c_source_l00096}{96}} of file \mbox{\hyperlink{transform_8c_source}{transform.\+c}}.
+
+\Hypertarget{transform_8c_aaf4c19a1c07b9eb0507583fa3992e9ed}\label{transform_8c_aaf4c19a1c07b9eb0507583fa3992e9ed} 
+\index{transform.c@{transform.c}!scale\_model@{scale\_model}}
+\index{scale\_model@{scale\_model}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{scale\_model()}{scale\_model()}}
+{\footnotesize\ttfamily int scale\+\_\+model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvertex}{vertex}} \texorpdfstring{$\ast$}{*}}]{coordinates,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+маштабирует модель, пропорционально увеличивая координаты точек 
+
+Функция маштабирует модель, пропорционально увеличивая координаты точек
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & адрес структуры с координатами \\
+\hline
+{\em scale} & коэфицент маштобирования модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ok 1 -\/ структура не существует 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{transform_8c_source_l00029}{29}} of file \mbox{\hyperlink{transform_8c_source}{transform.\+c}}.
+
